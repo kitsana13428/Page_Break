@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.paper-a4 {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: yellow;
+    color: black;
+
+    page-break-before: always; /* ทำให้ขึ้นหน้าใหม่เวลากดปริ้น */
+    /* ประยุกต์ใช้เวลาปริ้นรายงานต่างๆ */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media print { /* เวลากดปริ้น เปลี่ยนค่าต่างๆในหน้ากระดาษ เช่นสีและตัวอักษร*/
+    .paper-a4{
+        background-color: white;
+        color: black;   
+    }
+}
